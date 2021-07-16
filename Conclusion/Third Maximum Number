@@ -1,0 +1,18 @@
+class Solution:
+    def thirdMax(self, nums: List[int]) -> int:
+        nums=sorted(nums, reverse=True)
+        numlen=len(nums)
+        if numlen <=2:
+            return max(nums) 
+        i=0
+        while i<numlen-1:
+            if nums[i]==nums[i+1]:
+                del(nums[i+1])
+                numlen-=1
+            else:
+                i+=1
+            newLen =len(nums)
+        if numlen <=2:
+            return   max(nums)       
+        else:
+            return nums[2]
